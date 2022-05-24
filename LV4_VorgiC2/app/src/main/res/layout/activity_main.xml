@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_centre_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/guide_centre_vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        app:layout_constraintTop_toBottomOf="@id/guide_top"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/guide_centre_vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        app:layout_constraintBottom_toTopOf="@id/tv_count_teamA"
+        />
+
+    <TextView
+        android:id="@+id/tv_count_teamA"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@id/guide_centre_vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        app:layout_constraintBottom_toTopOf="@id/b_teamA_three"
+        />
+
+    <Button
+        android:backgroundTint="@color/teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamA_three"
+        app:layout_constraintBottom_toTopOf="@id/b_teamA_two"
+        app:layout_constraintEnd_toEndOf="@id/b_teamA_two"
+        android:text="3" />
+
+    <Button
+        android:backgroundTint="@color/teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamA_two"
+        app:layout_constraintBottom_toTopOf="@id/b_teamA_one"
+        app:layout_constraintEnd_toEndOf="@id/b_teamA_one"
+        android:text="2" />
+
+    <Button
+        android:backgroundTint="@color/teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamA_one"
+        app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guide_centre_vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_start"
+        android:text="1"
+        android:layout_marginBottom="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        app:layout_constraintStart_toEndOf="@id/guide_centre_vertical"
+        app:layout_constraintBottom_toTopOf="@id/tv_count_teamB"
+        />
+
+    <TextView
+        android:id="@+id/tv_count_teamB"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        app:layout_constraintStart_toEndOf="@id/guide_centre_vertical"
+        app:layout_constraintBottom_toTopOf="@id/b_teamB_three"
+        />
+
+    <Button
+        android:backgroundTint="@color/teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamB_three"
+        app:layout_constraintBottom_toTopOf="@id/b_teamB_two"
+        app:layout_constraintEnd_toEndOf="@id/b_teamB_two"
+        android:text="3" />
+
+    <Button
+        android:backgroundTint="@color/teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamB_two"
+        app:layout_constraintBottom_toTopOf="@id/b_teamB_one"
+        app:layout_constraintEnd_toEndOf="@id/b_teamB_one"
+        android:text="2" />
+
+    <Button
+        android:backgroundTint="@color/teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_teamB_one"
+        app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guide_end"
+        app:layout_constraintStart_toEndOf="@id/guide_centre_vertical"
+        android:text="1"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/b_reset"
+        app:layout_constraintBottom_toBottomOf="@id/guide_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guide_centre_vertical"
+        app:layout_constraintStart_toEndOf="@id/guide_centre_vertical"
+        android:text="Reset"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
